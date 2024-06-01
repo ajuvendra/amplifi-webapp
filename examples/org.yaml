@@ -15,3 +15,15 @@ metadata:
 spec:
   type: team
   children: []
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: ajuvendra
+spec:
+  profile:
+    displayName: Ajuvendra Kumar
+    email: ajuvendra@gamil.com
+    picture: https://example.com/staff/jenny-with-party-hat.jpeg
+  memberOf: [team-b, employees]
