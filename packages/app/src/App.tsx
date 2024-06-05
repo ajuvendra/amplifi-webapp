@@ -39,6 +39,9 @@ import { catalogEntityCreatePermission } from '@backstage/plugin-catalog-common/
 
 import { githubAuthApiRef } from '@backstage/core-plugin-api';
 
+import { ScaffolderFieldExtensions } from '@backstage/plugin-scaffolder-react';
+import { ValidateKebabCaseFieldExtension } from './components/scaffolder/ValidateKebabCase';
+
 const app = createApp({
   apis,
   bindRoutes({ bind }) {
@@ -95,7 +98,11 @@ const routes = (
         <ReportIssue />
       </TechDocsAddons>
     </Route>
-    <Route path="/create" element={<ScaffolderPage />} />
+    <Route path="/create" element={<ScaffolderPage />}>
+      <ScaffolderFieldExtensions>
+        <ValidateKebabCaseFieldExtension />
+      </ScaffolderFieldExtensions>
+    </Route>
     <Route path="/api-docs" element={<ApiExplorerPage />} />
     <Route
       path="/catalog-import"

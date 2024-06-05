@@ -21,6 +21,7 @@ spec:
           type: string
           description: Unique name of the component
           ui:autofocus: true
+          ui:field: ValidateKebabCase
           ui:options:
             rows: 5
     - title: Choose a location
