@@ -1,8 +1,13 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: my-my-plugin-component
+  name: amplifi-webapp
+  description: An example of a Backstage application.
+  # Example for optional annotations
+  # annotations:
+  #   github.com/project-slug: backstage/backstage
+  #   backstage.io/techdocs-ref: dir:.
 spec:
-  lifecycle: production
-  owner: my-team
-  type: service
+  type: website
+  owner: john@example.com
+  lifecycle: experimental
